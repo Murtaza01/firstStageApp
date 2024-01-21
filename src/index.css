@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headingFont {
+    font-family: "Merriweather", Courier, monospace;
+  }
+
+  .bookTag {
+    position: absolute;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .bookTagHide {
+    position: absolute;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    opacity: 0;
+    transform-origin: top;
+    transition:
+      transform 0.6s,
+      opacity 1s;
+  }
+
+  .bookTagShow {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .classBgStyle {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .backgroundGradientMD {
+    background: linear-gradient(45deg, white 60.3%, #3652ad 40.7%);
+  }
+  .backgroundGradient {
+    background: linear-gradient(20deg, white 50%, #3652ad 50.3%);
+  }
+
+  .homeItems {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 30px 0 10px 25px;
+    gap: 5px;
+  }
+
+  .homeItemsMD {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .accordion {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+  }
+  .accordion.show {
+    grid-template-rows: 1fr;
+  }
+
+  .accordionBgCover {
+    position: absolute;
+    inset: 0;
+    background-color: #343333b1;
+    opacity: 0.5;
+    z-index: -1;
+  }
+  .backgroundBody {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
+
+  .clipPath {
+    clip-path: polygon(35% 78%, 31% 100%, 0 100%, 0 66%);
+  }
+
+  .headerStyle {
+    position: absolute;
+    background-color: #3652ad;
+    width: calc(100% + 6px);
+    height: 60%;
+    left: -4px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+
+  .pronunciationClass {
+    background: url("/classImages/pronunciationClass.jpg");
+  }
+  .grammarClass {
+    background: url("/classImages/grammarClass.jpg");
+  }
+  .frenchClass {
+    background: url("/classImages/frenchClass.jpg");
+  }
+  .literatureClass {
+    background: url("/classImages/literatureClass.jpg");
+  }
+}
