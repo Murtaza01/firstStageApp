@@ -1,10 +1,11 @@
 import { FaYoutube } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
 import { TfiFaceSad } from "react-icons/tfi";
+import image from "../assets/images/totem1.jpg";
 
 export default function Resources({ link, linkTitle, type }) {
   return (
-    <li className=" relative  my-1 marker:text-slate-600  ">
+    <li className=" relative my-2 text-[15px] marker:text-slate-600 sm:text-lg  ">
       {link === "link" ? (
         <a href={`${process.env.PUBLIC_URL} + link`} className="mr-3 " download>
           {!linkTitle ? "Nothing to see here" : linkTitle}
@@ -15,7 +16,7 @@ export default function Resources({ link, linkTitle, type }) {
         </a>
       )}
 
-      <span className=" absolute top-1 text-[#3652ad]">
+      <span className=" absolute top-1   text-[#3652ad]">
         {type === "video" ? (
           <FaYoutube />
         ) : type === "link" ? (

@@ -91,7 +91,7 @@ const classData = [
       },
       {
         id: uuidv4(),
-        linkTitle: "figurative language and sound devices",
+        linkTitle: "figurative language & sound devices",
         link: "https://youtu.be/jC6MsrRf_1k?si=aH4qg8fcJvsja3X3",
         type: "video",
       },
