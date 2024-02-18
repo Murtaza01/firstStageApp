@@ -25,9 +25,7 @@ export default function Class({
     case "grammarClass":
       classImage = "grammarClass";
       break;
-    case "frenchClass":
-      classImage = "frenchClass";
-      break;
+
     case "literatureClass":
       classImage = "literatureClass";
       break;
@@ -40,9 +38,9 @@ export default function Class({
   return (
     <div
       onClick={handleClick}
-      className={`${classImage} before:accordionBgCover group relative isolate mx-auto w-11/12 
-         bg-red-300 bg-cover bg-center p-3  text-lg font-semibold capitalize
-          text-white shadow-md shadow-white/15 hover:cursor-pointer`}
+      className={`${classImage} before:accordionBgCover  group relative isolate mx-auto 
+         w-11/12 bg-cover bg-center  p-3 text-[17px] font-semibold capitalize
+          text-[#E9F6FF] shadow-sm shadow-white/15 hover:cursor-pointer md:text-lg`}
     >
       <h3>{title}</h3>
       <p>{paragraph}</p>
@@ -56,7 +54,7 @@ export default function Class({
               `}
       >
         <div className=" overflow-hidden ">
-          <hr className=" mx-auto my-2 w-[80%] border-2 border-slate-600" />
+          <hr className=" mx-auto my-2 w-[80%] border-[2px] border-black" />
           <span className="center flex gap-2">
             <FaBook className=" text-xl text-[#3652ad]" />
             <h4 className="text-center text-2xl">Resources </h4>

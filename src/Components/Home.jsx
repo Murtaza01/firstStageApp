@@ -11,12 +11,12 @@ export default function Home() {
       <div className="w-56 md:w-80">
         <img className="rounded-full" src={homeBg} alt="" />
       </div>
-      <div className=" flex min-h-48 flex-col gap-2 pt-10">
+      <div className=" flex min-h-48 flex-col gap-5 px-2 pb-3 pt-10 sm:py-5">
         <div className="flex">
           <h3 className="text-3xl font-semibold ">Welcome Freshman</h3>
           <IoSchoolOutline className="text-3xl text-[#3652ad]" />
         </div>
-        <p className="max-w-[500px]  text-lg">
+        <p className="paragraphFont max-w-[500px] ">
           Congratulations on finishing highschool, you have a better challenge
           now, College, in here you will find some resources for your first year
           in college, don't forget to have fun in the process !

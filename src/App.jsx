@@ -6,7 +6,8 @@ import Book from "./Components/Book";
 import Class from "./Components/Class";
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
-import Heading from "./Components/Heading";
+import Heading from "./Components/MiniComponents/Heading";
+import Search from "./Components/Search";
 
 function App() {
   return (
@@ -14,14 +15,14 @@ function App() {
       <div className="backgroundBody md:p-5">
         <Home />
         <div className="m-5 min-h-80">
-          <Heading text="Books to buy" />
+          <Heading>Your Books</Heading>
           <div className="center flex-wrap  gap-5 md:gap-10">
             {booksData.map(({ title, image, link }) => {
               return <Book key={title} image={image} link={link} />;
             })}
           </div>
         </div>
-        <Heading text="Classes and Resources" />
+        <Heading>Classes And Resources</Heading>
         <div className="flex flex-col gap-3 py-4">
           {classData.map(
             ({ id, title, paragraph, instructor, image, resources }) => {
@@ -38,7 +39,10 @@ function App() {
             },
           )}
         </div>
+        <Heading>Marks</Heading>
+        <Search />
       </div>
+
       <Footer />
     </>
   );

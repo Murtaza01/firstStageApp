@@ -1,6 +1,7 @@
 import { FaInstagram } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -37,7 +38,10 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <p>All Copyrights is Reserved to Murtaza Alkabie</p>
+      <p className="text-lg">
+        Made With <FaHeart className="mx-1 inline text-xl text-red-600" /> to
+        All My Colleagues
+      </p>
     </footer>
   );
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Lato&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +17,16 @@
   }
 
   .headingFont {
-    font-family: "Merriweather", Courier, monospace;
+    font-family: "Lato", serif, monospace;
+    color: #e9f6ff;
+  }
+
+  .paragraphFont {
+    font-family: "Open Sans", sans-serif, monospace;
+  }
+
+  .hrColor {
+    border-color:;
   }
 
   .bookTag {
@@ -64,7 +73,7 @@
     flex-direction: column;
     justify-items: center;
     padding: 30px 0 10px 15px;
-    gap: 5px;
+    gap: 20px;
   }
 
   .homeItemsMD {
@@ -87,12 +96,11 @@
   .accordionBgCover {
     position: absolute;
     inset: 0;
-    background-color: #343333b1;
-    opacity: 0.5;
+    background-color: #34333380;
     z-index: -1;
   }
   .backgroundBody {
-    background: linear-gradient(to bottom, #e9f6ff, #0a1d56);
+    background: linear-gradient(to right bottom, #7fc7d9, #0f1035);
   }
 
   .clipPath {
@@ -116,10 +124,36 @@
   .grammarClass {
     background: url("/classImages/grammarClass.jpg");
   }
-  .frenchClass {
-    background: url("/classImages/frenchClass.jpg");
-  }
+
   .literatureClass {
     background: url("/classImages/literatureClass.jpg");
+  }
+
+  .tableTransition {
+    transition:
+      opacity 1s,
+      display 1s;
+  }
+
+  .tableShow {
+    display: flex;
+    opacity: 1;
+  }
+
+  .tableStyle {
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+}
+
+th,
+td {
+  padding: 0.7rem 4rem;
+  text-align: center;
+}
+
+@starting-style {
+  .tableTransition {
+    opacity: 0;
   }
 }

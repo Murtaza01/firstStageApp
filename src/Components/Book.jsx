@@ -2,7 +2,7 @@ export default function Book({ image, link }) {
   return (
     <>
       <div className="basis-64 ">
-        <a href={link}>
+        <a href={link} target="_blank">
           <div className="relative flex flex-col shadow-2xl">
             {/* image */}
             <img
@@ -11,7 +11,7 @@ export default function Book({ image, link }) {
               alt=""
             />
             {/* tag */}
-            <div className="clipPath absolute h-full w-full bg-[#3652adbb]">
+            <div className="clipPath absolute h-full w-full bg-[#3652ad]">
               <div className="center   absolute bottom-0 flex-col px-2 py-5 text-white">
                 <span>Click to</span>
                 <span>Downlaod</span>
