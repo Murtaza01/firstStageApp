@@ -9,7 +9,8 @@ export default function Search() {
   const [searchedName, setSearchedName] = useState("");
 
   let name;
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     setSearchedName(input.current.value);
   }
 
@@ -39,7 +40,7 @@ export default function Search() {
           </span>
         </p>
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleClick}
           className="paragraphFont flex h-10 w-64 flex-row-reverse items-center justify-around rounded-xl bg-white shadow-md "
         >
           <input
@@ -49,10 +50,7 @@ export default function Search() {
             placeholder="Search"
           />
           <span className=" h-4/6 border-l-[1px] border-black"></span>
-          <IoSearchOutline
-            onClick={handleClick}
-            className="cursor-pointer text-2xl"
-          />
+          <IoSearchOutline className="cursor-pointer text-2xl" />
         </form>
 
         {searchedName === name ? (
@@ -68,9 +66,11 @@ export default function Search() {
         )}
       </div>
       <HR />
-      <button className="mx-auto  block rounded-lg bg-black px-5 py-1 text-lg text-[#e9f6ff] hover:cursor-pointer hover:bg-black/40 ">
-        Download All Marks
-      </button>
+      <a href="#">
+        <button className="mx-auto  block rounded-lg bg-black px-5 py-1 text-lg text-[#e9f6ff] hover:cursor-pointer hover:bg-black/40 ">
+          Download All Marks
+        </button>
+      </a>
     </div>
   );
 }

@@ -13,7 +13,9 @@ export default function Home() {
       </div>
       <div className=" flex min-h-48 flex-col gap-5 px-2 pb-3 pt-10 sm:py-5">
         <div className="flex">
-          <h3 className="text-3xl font-semibold ">Welcome Freshman</h3>
+          <h3 className="text-2xl font-semibold sm:text-3xl ">
+            Welcome Freshman
+          </h3>
           <IoSchoolOutline className="text-3xl text-[#3652ad]" />
         </div>
         <p className="paragraphFont max-w-[500px] ">

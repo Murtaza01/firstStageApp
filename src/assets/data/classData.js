@@ -145,7 +145,7 @@ const classData = [
       },
       {
         id: uuidv4(),
-        linkTitle: "summary of the poem:'A Red,Red Rose'",
+        linkTitle: "summary of:A Red Red Rose",
         link: "https://youtu.be/8jua1HIKdVE?si=mtLacWa0fc4s3aBi",
         type: "video",
       },
